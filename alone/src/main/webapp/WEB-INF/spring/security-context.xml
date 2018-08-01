@@ -8,6 +8,7 @@
 	<security:http auto-config="true" use-expressions="false">
 		<security:form-login login-page="/myLogin"/>
 		<security:intercept-url pattern="/sample/admin" access="ROLE_ADMIN"/>
+		<security:remember-me key="jr001" token-validity-seconds="3600" data-source-ref="dataSource"/>
 	</security:http>
 
 	<security:authentication-manager>
